@@ -11,7 +11,6 @@ class SignInViewModel: ObservableObject {
     
     @Published var login = ""
     @Published var password = ""
-    @Published var showSignUp = false
     @Published var isLoading = false
     @Published var isValidForm = false
     

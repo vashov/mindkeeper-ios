@@ -39,11 +39,6 @@ struct SignInView: View {
                             Text("Sign Up Now")
                                 .foregroundColor(.foregroundPrimary)
                         }
-                        
-//                        Button(action: { viewModel.showSignUp.toggle() }, label: {
-//                            Text("Sign Up Now")
-//                                .foregroundColor(.foregroundPrimary)
-//                        })
                     }
                     .padding(.top, 22)
                     
@@ -55,10 +50,6 @@ struct SignInView: View {
             
         }
         .background(Color.backgroundPrimary)
-        //        .ignoresSafeArea(.all, edges: .all)
-//        .fullScreenCover(isPresented: $viewModel.showSignUp, content: {
-//            SignUpView()
-//        })
     }
 }
 
