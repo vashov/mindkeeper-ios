@@ -23,14 +23,8 @@ struct SignInView: View {
                 
                 Button(action:  viewModel.loginRequest) {
                     Text("SIGN IN")
-                        .foregroundColor(.foregroundSecond)
-                        .bold()
-                        .padding(.vertical)
-                        .frame(width: UIScreen.main.bounds.width - 30)
-                        .background(Color.backgroundSecond)
-                        .opacity(viewModel.isValidForm ? 1 : 0.8)
-                        .clipShape(Capsule())
                 }
+                .buttonStyle(MainButtonStyle())
                 .padding(.top, 22)
                 .disabled(viewModel.isButtonDisabled)
                 

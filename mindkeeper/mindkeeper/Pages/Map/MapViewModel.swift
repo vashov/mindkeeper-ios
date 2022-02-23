@@ -1,64 +1,74 @@
 import Foundation
 import SwiftUI
-import MapKit
-import CoreLocation
+import Combine
 
-//struct Marker: Identifiable {
-//    let id = UUID()
-//    var location: CLLocationCoordinate2D
-//}
+struct NodeModel {
+    var node: Node
+    var selection: SelectionHandler
+}
 
 class MapViewModel : ObservableObject {
     
     @Inject var appState: AppState
+    @Inject var ideasService: IdeasService
     
-    let startPosition = CLLocationCoordinate2D(
-        latitude: 25.7617,
-        longitude: 80.1918
-    )
-    
-    @Published var markers: [QueryPlace] = []
-    
-    @Published var userTrackingMode: MapUserTrackingMode = .follow
-    
-    @Published var region: MKCoordinateRegion
+    @Published var nodes: [NodeModel] = []
     
     @Published var showQueryDetailsPage = false
     
-    @Published var isLoadingQueries = false
+    @Published var isLoadingIdeas = false
+    
+    @Published var mesh: Mesh
+    
+    var selectionHandler = SelectionHandler()
+    
+    private var cancellableSet: Set<AnyCancellable> = []
     
     init() {
-//        markers = [QueryPlace(queryId: 5, name: "Some place", latitude: startPosition.latitude, longitude: startPosition.longitude)]
+        nodes = [
+            NodeModel(node: Node(id: UUID(), position: .zero, text: "Some node 1"),
+                      selection: SelectionHandler()),
+            NodeModel(node: Node(id: UUID(), position: .zero, text: "Some node 2"),
+                      selection: SelectionHandler()),
+            NodeModel(node: Node(id: UUID(), position: .zero, text: "Some node 3"),
+                      selection: SelectionHandler()),
+            NodeModel(node: Node(id: UUID(), position: .zero, text: "Some node 4"),
+                      selection: SelectionHandler())
+        ]
         
-        region = MKCoordinateRegion(
-            center: startPosition,
-            span: MKCoordinateSpan(
-                latitudeDelta: 10,
-                longitudeDelta: 10
-            )
-        )
+        mesh = MapViewModel.sampleMesh()
     }
-    
-//    func addQuery() {
-//
-//
-//        let newPlace = QueryPlace(
-//            queryId: 10,
-//            name: "SomeQuery" ,
-//            latitude: region.center.latitude,
-//            longitude: region.center.longitude)
-//
-//        markers.append(newPlace)
-//    }
     
     func initialize() {
         print("MapViewModel initialize")
-        loadQueries()
+        loadIdeas()
     }
     
-    func loadQueries() {
-        isLoadingQueries = true
+    static private func sampleMesh() -> Mesh {
+      let mesh = Mesh()
+      mesh.updateNodeText(mesh.rootNode(), string: "every human has a right to")
+      [(0, "shelter"),
+       (120, "food"),
+       (240, "education")].forEach { (angle, name) in
+        let point = mesh.pointWithCenter(center: .zero, radius: 200, angle: angle.radians)
+        let node = mesh.addChild(mesh.rootNode(), at: point)
+        mesh.updateNodeText(node, string: name)
+      }
+      return mesh
+    }
+    
+    func loadIdeas() {
+        isLoadingIdeas = true
         
+        ideasService.getAll(userId: appState.userId)
+            .sink(receiveCompletion: { completion in
+                print(completion)
+                self.isLoadingIdeas = false
+            }, receiveValue: { ideasResult in
+                self.generateMesh(ideasResult.ideas)
+                self.isLoadingIdeas = false
+            })
+            .store(in: &cancellableSet)
 //        queriesRepository.getAll() { result in
 //            switch result {
 //            case .success(let queries):
@@ -73,4 +83,14 @@ class MapViewModel : ObservableObject {
 //        }
     }
     
+    private func generateMesh(_ ideas: [IdeaListItem]) {
+        let mesh = Mesh()
+        let child1 = Node(position: CGPoint(x: 100, y: 200), text: "child 1")
+        let child2 = Node(position: CGPoint(x: -100, y: 200), text: "child 2")
+        [child1, child2].forEach {
+          mesh.addNode($0)
+          mesh.connect(mesh.rootNode(), to: $0)
+        }
+        mesh.connect(child1, to: child2)
+    }
 }

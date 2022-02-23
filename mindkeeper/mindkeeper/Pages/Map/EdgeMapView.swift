@@ -28,31 +28,32 @@
 
 import SwiftUI
 
-struct MapView: View {
-  @ObservedObject var selection: SelectionHandler
-  @ObservedObject var mesh: Mesh
-//    @ObservedObject var viewModel: MapViewModel
+struct EdgeMapView: View {
+  @Binding var edges: [EdgeProxy]
   
   var body: some View {
     ZStack {
-//      Rectangle().fill(Color.orange)
-      EdgeMapView(edges: $mesh.links)
-      NodeMapView(selection: selection, nodes: $mesh.nodes)
+      ForEach(edges) { edge in
+        EdgeView(edge: edge)
+          .stroke(Color.black, lineWidth: 3.0)
+      }
     }
   }
 }
 
-struct MapView_Previews: PreviewProvider {
+struct EdgeMapView_Previews: PreviewProvider {
+  static let proxy1 = EdgeProxy(
+    id: EdgeID(),
+    start: .zero,
+    end: CGPoint(x: -100, y: 30))
+  static let proxy2 = EdgeProxy(
+    id: EdgeID(),
+    start: .zero,
+    end: CGPoint(x: 100, y: 30))
+  
+  @State static var edges = [proxy1, proxy2]
+  
   static var previews: some View {
-    let mesh = Mesh()
-    let child1 = Node(position: CGPoint(x: 100, y: 200), text: "child 1")
-    let child2 = Node(position: CGPoint(x: -100, y: 200), text: "child 2")
-    [child1, child2].forEach {
-      mesh.addNode($0)
-      mesh.connect(mesh.rootNode(), to: $0)
-    }
-    mesh.connect(child1, to: child2)
-    let selection = SelectionHandler()
-    return MapView(selection: selection, mesh: mesh)
+    EdgeMapView(edges: $edges)
   }
 }

@@ -26,33 +26,25 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-import SwiftUI
+import Foundation
+import CoreGraphics
 
-struct MapView: View {
-  @ObservedObject var selection: SelectionHandler
-  @ObservedObject var mesh: Mesh
-//    @ObservedObject var viewModel: MapViewModel
-  
-  var body: some View {
-    ZStack {
-//      Rectangle().fill(Color.orange)
-      EdgeMapView(edges: $mesh.links)
-      NodeMapView(selection: selection, nodes: $mesh.nodes)
-    }
-  }
+typealias EdgeID = UUID
+
+struct Edge: Identifiable {
+  var id = EdgeID()
+  var start: NodeID
+  var end: NodeID
 }
 
-struct MapView_Previews: PreviewProvider {
-  static var previews: some View {
-    let mesh = Mesh()
-    let child1 = Node(position: CGPoint(x: 100, y: 200), text: "child 1")
-    let child2 = Node(position: CGPoint(x: -100, y: 200), text: "child 2")
-    [child1, child2].forEach {
-      mesh.addNode($0)
-      mesh.connect(mesh.rootNode(), to: $0)
-    }
-    mesh.connect(child1, to: child2)
-    let selection = SelectionHandler()
-    return MapView(selection: selection, mesh: mesh)
+struct EdgeProxy: Identifiable {
+  var id: EdgeID
+  var start: CGPoint
+  var end: CGPoint
+}
+
+extension Edge {
+  static func == (lhs: Edge, rhs: Edge) -> Bool {
+    return lhs.start == rhs.start && lhs.end == rhs.end
   }
 }

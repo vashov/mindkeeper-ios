@@ -30,7 +30,7 @@ struct AchievementCardView: View {
         )
         //        .disabled(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
         .frame(width: UIScreen.main.bounds.width - 30)
-        .padding(.bottom)
+        .padding(.top)
         .padding(.horizontal)
     }
 }

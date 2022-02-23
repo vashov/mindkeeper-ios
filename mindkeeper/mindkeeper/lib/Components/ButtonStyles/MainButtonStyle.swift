@@ -19,7 +19,7 @@ struct MainButtonStyle: ButtonStyle {
                     .shadow(radius: 5)
                     .frame(width: UIScreen.main.bounds.width - 30)
             )
-            .opacity(configuration.isPressed || !isEnabled ? 0.2 : 1)
+            .opacity(configuration.isPressed || !isEnabled ? 0.5 : 1)
     }
 }
 

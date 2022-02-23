@@ -2,10 +2,6 @@ import SwiftUI
 
 struct HomeView: View {
     
-    init() {
-        UIToolbar.appearance().tintColor = UIColor.red
-    }
-    
     @ObservedObject var viewModel = HomeViewModel()
     
     var body: some View {
@@ -13,7 +9,6 @@ struct HomeView: View {
             NavigationView {
                 ZStack {
                     LogoBackgroundView()
-                    //                    VStack {
                     ScrollView {
                         VStack {
                             NavigationLink(destination: StatisticsView()) {
@@ -27,7 +22,6 @@ struct HomeView: View {
                                 }
                                 .padding()
                             }
-                            
                             NavigationLink(destination: AchievementsView(), label: { Text("Achievements") })
                                 .buttonStyle(MainButtonStyle())
                                 .padding(.top)
@@ -58,27 +52,30 @@ struct HomeView: View {
                             }
                         }
                     }
-                    
-                    VStack {
-                        Spacer()
-                        HStack {
-                            Spacer()
-                            ZStack {
-                                NavigationLink(destination: IdeaDetailsView()) {
-                                    Text("idea")
-                                }
-                                .buttonStyle(CreateIdeaButtonStyle())
-                            }
-                        }
-                        .padding()
-                        .padding(.trailing)
-                    }
+                    getCreateIdeaButton()
                 }
                 .navigationBarTitleDisplayMode(NavigationBarItem.TitleDisplayMode.inline)
             }
             .navigationViewStyle(StackNavigationViewStyle())
         }
         .accentColor(.black)
+    }
+    
+    private func getCreateIdeaButton() -> some View {
+        VStack {
+            Spacer()
+            HStack {
+                Spacer()
+                ZStack {
+                    NavigationLink(destination: IdeaDetailsView()) {
+                        Text("idea")
+                    }
+                    .buttonStyle(CreateIdeaButtonStyle())
+                }
+            }
+            .padding()
+            .padding(.trailing)
+        }
     }
 }
 

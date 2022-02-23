@@ -26,33 +26,55 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-import SwiftUI
+import Foundation
+import CoreGraphics
 
-struct MapView: View {
-  @ObservedObject var selection: SelectionHandler
-  @ObservedObject var mesh: Mesh
-//    @ObservedObject var viewModel: MapViewModel
-  
-  var body: some View {
-    ZStack {
-//      Rectangle().fill(Color.orange)
-      EdgeMapView(edges: $mesh.links)
-      NodeMapView(selection: selection, nodes: $mesh.nodes)
+extension Mesh {
+  static func sampleMesh() -> Mesh {
+    let mesh = Mesh()
+    mesh.updateNodeText(mesh.rootNode(), string: "every human has a right to")
+    [(0, "shelter"),
+     (120, "food"),
+     (240, "education")].forEach { (angle, name) in
+      let point = mesh.pointWithCenter(center: .zero, radius: 200, angle: angle.radians)
+      let node = mesh.addChild(mesh.rootNode(), at: point)
+      mesh.updateNodeText(node, string: name)
+    }
+    return mesh
+  }
+
+  static func sampleProceduralMesh() -> Mesh {
+    let mesh = Mesh()
+    //seed root node with 3 children
+    [0, 1, 2, 3].forEach { index in
+      let point = mesh.pointWithCenter(center: .zero, radius: 400, angle: (index * 90 + 30).radians)
+      let node = mesh.addChild(mesh.rootNode(), at: point)
+      mesh.updateNodeText(node, string: "A\(index + 1)")
+      mesh.addChildrenRecursive(to: node, distance: 200, generation: 1)
+    }
+    return mesh
+  }
+
+  func addChildrenRecursive(to node: Node, distance: CGFloat, generation: Int) {
+    let labels = ["A", "B", "C", "D", "E", "F"]
+    guard generation < labels.count else {
+      return
+    }
+
+    let childCount = Int.random(in: 1..<4)
+    var count = 0
+    while count < childCount {
+      count += 1
+      let position = positionForNewChild(node, length: distance)
+      let child = addChild(node, at: position)
+      updateNodeText(child, string: "\(labels[generation])\(count + 1)")
+      addChildrenRecursive(to: child, distance: distance + 200.0, generation: generation + 1)
     }
   }
 }
 
-struct MapView_Previews: PreviewProvider {
-  static var previews: some View {
-    let mesh = Mesh()
-    let child1 = Node(position: CGPoint(x: 100, y: 200), text: "child 1")
-    let child2 = Node(position: CGPoint(x: -100, y: 200), text: "child 2")
-    [child1, child2].forEach {
-      mesh.addNode($0)
-      mesh.connect(mesh.rootNode(), to: $0)
-    }
-    mesh.connect(child1, to: child2)
-    let selection = SelectionHandler()
-    return MapView(selection: selection, mesh: mesh)
+extension Int {
+  var radians: CGFloat {
+    CGFloat(self) * CGFloat.pi/180.0
   }
 }

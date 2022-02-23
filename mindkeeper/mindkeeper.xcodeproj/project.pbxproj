@@ -33,7 +33,6 @@
 		A34373CC27B666A1004FD1DA /* LeaderboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A343739727B666A1004FD1DA /* LeaderboardView.swift */; };
 		A34373CD27B666A1004FD1DA /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A343739927B666A1004FD1DA /* MapView.swift */; };
 		A34373CE27B666A1004FD1DA /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A343739A27B666A1004FD1DA /* MapViewModel.swift */; };
-		A34373CF27B666A1004FD1DA /* QueryPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = A343739B27B666A1004FD1DA /* QueryPlace.swift */; };
 		A34373D027B666A1004FD1DA /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A343739D27B666A1004FD1DA /* MenuViewModel.swift */; };
 		A34373D127B666A1004FD1DA /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A343739E27B666A1004FD1DA /* MenuView.swift */; };
 		A34373D427B666A1004FD1DA /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34373A327B666A1004FD1DA /* SignInViewModel.swift */; };
@@ -70,6 +69,19 @@
 		A3B0FA6627C2AD5B0084CAAC /* IdeaDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B0FA6527C2AD5B0084CAAC /* IdeaDetailsViewModel.swift */; };
 		A3B0FA6927C2CB870084CAAC /* IdeasService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B0FA6827C2CB870084CAAC /* IdeasService.swift */; };
 		A3B0FA6B27C2CEBE0084CAAC /* IdeaListResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B0FA6A27C2CEBE0084CAAC /* IdeaListResult.swift */; };
+		A3B0FA6D27C344E50084CAAC /* NodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B0FA6C27C344E50084CAAC /* NodeView.swift */; };
+		A3B0FA6F27C3463A0084CAAC /* SelectionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B0FA6E27C3463A0084CAAC /* SelectionHandler.swift */; };
+		A3B0FA7127C3467F0084CAAC /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B0FA7027C3467F0084CAAC /* Node.swift */; };
+		A3B0FA7327C346D20084CAAC /* Mesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B0FA7227C346D20084CAAC /* Mesh.swift */; };
+		A3B0FA7527C3470A0084CAAC /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B0FA7427C3470A0084CAAC /* Edge.swift */; };
+		A3B0FA7727C3482B0084CAAC /* CGPoint+Help.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B0FA7627C3482B0084CAAC /* CGPoint+Help.swift */; };
+		A3B0FA7C27C4E4DC0084CAAC /* NodeMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B0FA7B27C4E4DC0084CAAC /* NodeMapView.swift */; };
+		A3B0FA7E27C4E5420084CAAC /* EdgeMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B0FA7D27C4E5420084CAAC /* EdgeMapView.swift */; };
+		A3B0FA8027C4E5630084CAAC /* EdgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B0FA7F27C4E5630084CAAC /* EdgeView.swift */; };
+		A3B0FA8227C4E5BB0084CAAC /* SurfaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B0FA8127C4E5BB0084CAAC /* SurfaceView.swift */; };
+		A3B0FA8427C4E61A0084CAAC /* Mesh+MathHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B0FA8327C4E61A0084CAAC /* Mesh+MathHelp.swift */; };
+		A3B0FA8627C4E6CD0084CAAC /* Mesh+Demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B0FA8527C4E6CD0084CAAC /* Mesh+Demo.swift */; };
+		A3B0FA8827C4EE850084CAAC /* MapSurfaceTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B0FA8727C4EE850084CAAC /* MapSurfaceTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,7 +112,6 @@
 		A343739727B666A1004FD1DA /* LeaderboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardView.swift; sourceTree = "<group>"; };
 		A343739927B666A1004FD1DA /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		A343739A27B666A1004FD1DA /* MapViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
-		A343739B27B666A1004FD1DA /* QueryPlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryPlace.swift; sourceTree = "<group>"; };
 		A343739D27B666A1004FD1DA /* MenuViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
 		A343739E27B666A1004FD1DA /* MenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		A34373A327B666A1004FD1DA /* SignInViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
@@ -135,6 +146,19 @@
 		A3B0FA6527C2AD5B0084CAAC /* IdeaDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaDetailsViewModel.swift; sourceTree = "<group>"; };
 		A3B0FA6827C2CB870084CAAC /* IdeasService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeasService.swift; sourceTree = "<group>"; };
 		A3B0FA6A27C2CEBE0084CAAC /* IdeaListResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaListResult.swift; sourceTree = "<group>"; };
+		A3B0FA6C27C344E50084CAAC /* NodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeView.swift; sourceTree = "<group>"; };
+		A3B0FA6E27C3463A0084CAAC /* SelectionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionHandler.swift; sourceTree = "<group>"; };
+		A3B0FA7027C3467F0084CAAC /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		A3B0FA7227C346D20084CAAC /* Mesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mesh.swift; sourceTree = "<group>"; };
+		A3B0FA7427C3470A0084CAAC /* Edge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Edge.swift; sourceTree = "<group>"; };
+		A3B0FA7627C3482B0084CAAC /* CGPoint+Help.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Help.swift"; sourceTree = "<group>"; };
+		A3B0FA7B27C4E4DC0084CAAC /* NodeMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeMapView.swift; sourceTree = "<group>"; };
+		A3B0FA7D27C4E5420084CAAC /* EdgeMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeMapView.swift; sourceTree = "<group>"; };
+		A3B0FA7F27C4E5630084CAAC /* EdgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeView.swift; sourceTree = "<group>"; };
+		A3B0FA8127C4E5BB0084CAAC /* SurfaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfaceView.swift; sourceTree = "<group>"; };
+		A3B0FA8327C4E61A0084CAAC /* Mesh+MathHelp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mesh+MathHelp.swift"; sourceTree = "<group>"; };
+		A3B0FA8527C4E6CD0084CAAC /* Mesh+Demo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mesh+Demo.swift"; sourceTree = "<group>"; };
+		A3B0FA8727C4EE850084CAAC /* MapSurfaceTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSurfaceTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +224,7 @@
 				A343738627B666A1004FD1DA /* Errors */,
 				A343738827B666A1004FD1DA /* Infrastructure */,
 				A3B0FA6027C2A4B30084CAAC /* BindingExtensions.swift */,
+				A3B0FA7627C3482B0084CAAC /* CGPoint+Help.swift */,
 			);
 			path = lib;
 			sourceTree = "<group>";
@@ -312,9 +337,15 @@
 		A343739827B666A1004FD1DA /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				A3B0FA7827C348B90084CAAC /* Models */,
 				A343739927B666A1004FD1DA /* MapView.swift */,
 				A343739A27B666A1004FD1DA /* MapViewModel.swift */,
-				A343739B27B666A1004FD1DA /* QueryPlace.swift */,
+				A3B0FA6C27C344E50084CAAC /* NodeView.swift */,
+				A3B0FA7B27C4E4DC0084CAAC /* NodeMapView.swift */,
+				A3B0FA7D27C4E5420084CAAC /* EdgeMapView.swift */,
+				A3B0FA7F27C4E5630084CAAC /* EdgeView.swift */,
+				A3B0FA8127C4E5BB0084CAAC /* SurfaceView.swift */,
+				A3B0FA8727C4EE850084CAAC /* MapSurfaceTabView.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -474,6 +505,19 @@
 			path = Ideas;
 			sourceTree = "<group>";
 		};
+		A3B0FA7827C348B90084CAAC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A3B0FA8327C4E61A0084CAAC /* Mesh+MathHelp.swift */,
+				A3B0FA8527C4E6CD0084CAAC /* Mesh+Demo.swift */,
+				A3B0FA6E27C3463A0084CAAC /* SelectionHandler.swift */,
+				A3B0FA7027C3467F0084CAAC /* Node.swift */,
+				A3B0FA7227C346D20084CAAC /* Mesh.swift */,
+				A3B0FA7427C3470A0084CAAC /* Edge.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -555,7 +599,6 @@
 				A34373C327B666A1004FD1DA /* Resolver.swift in Sources */,
 				A34373C627B666A1004FD1DA /* HomeViewModel.swift in Sources */,
 				A34373B827B666A1004FD1DA /* ApiConstants.swift in Sources */,
-				A34373CF27B666A1004FD1DA /* QueryPlace.swift in Sources */,
 				A34373F227BA08F9004FD1DA /* HttpClient.swift in Sources */,
 				A34373F927BCACD2004FD1DA /* Achievement.swift in Sources */,
 				A34373BA27B666A1004FD1DA /* AchievementCardView.swift in Sources */,
@@ -566,15 +609,21 @@
 				A343741027BEE710004FD1DA /* CreateIdeaButtonStyle.swift in Sources */,
 				A34373DD27B666A1004FD1DA /* UsersService.swift in Sources */,
 				A343740D27BEE3FF004FD1DA /* MainButtonStyle.swift in Sources */,
+				A3B0FA6D27C344E50084CAAC /* NodeView.swift in Sources */,
+				A3B0FA7327C346D20084CAAC /* Mesh.swift in Sources */,
 				A34373C527B666A1004FD1DA /* SettingsView.swift in Sources */,
 				A34373FD27BCCDC3004FD1DA /* StatsUserResult.swift in Sources */,
 				A34373CB27B666A1004FD1DA /* LeaderboardViewModel.swift in Sources */,
+				A3B0FA7E27C4E5420084CAAC /* EdgeMapView.swift in Sources */,
 				A343740427BEE0DC004FD1DA /* AchievementsViewModel.swift in Sources */,
 				A34373C827B666A1004FD1DA /* StatisticsModel.swift in Sources */,
 				A343740827BEE100004FD1DA /* AchievementsView.swift in Sources */,
 				A3B0FA6627C2AD5B0084CAAC /* IdeaDetailsViewModel.swift in Sources */,
+				A3B0FA6F27C3463A0084CAAC /* SelectionHandler.swift in Sources */,
+				A3B0FA8227C4E5BB0084CAAC /* SurfaceView.swift in Sources */,
 				A34373EE27B99A49004FD1DA /* AppError.swift in Sources */,
 				A3B0FA6927C2CB870084CAAC /* IdeasService.swift in Sources */,
+				A3B0FA7527C3470A0084CAAC /* Edge.swift in Sources */,
 				A34373D627B666A1004FD1DA /* StatisticsService.swift in Sources */,
 				A34373BF27B666A1004FD1DA /* LoadingView.swift in Sources */,
 				A343728F27B66578004FD1DA /* ContentView.swift in Sources */,
@@ -585,6 +634,7 @@
 				A3B0FA6427C2AD4E0084CAAC /* IdeaDetailsView.swift in Sources */,
 				A343741327BEE927004FD1DA /* StatisticsViewModel.swift in Sources */,
 				A34373FF27BCCEA9004FD1DA /* StatsSystemResult.swift in Sources */,
+				A3B0FA7727C3482B0084CAAC /* CGPoint+Help.swift in Sources */,
 				A343728D27B66578004FD1DA /* MindkeeperApp.swift in Sources */,
 				A34373EB27B914C0004FD1DA /* Response.swift in Sources */,
 				A343741527BEE93F004FD1DA /* StatisticsView.swift in Sources */,
@@ -599,16 +649,22 @@
 				A34373E627B7ACA5004FD1DA /* PasswordCheck.swift in Sources */,
 				A34373E827B7ACB7004FD1DA /* UsernameCheck.swift in Sources */,
 				A34373CC27B666A1004FD1DA /* LeaderboardView.swift in Sources */,
+				A3B0FA8827C4EE850084CAAC /* MapSurfaceTabView.swift in Sources */,
 				A3B0FA6B27C2CEBE0084CAAC /* IdeaListResult.swift in Sources */,
 				A34373DC27B666A1004FD1DA /* User.swift in Sources */,
 				A34373CA27B666A1004FD1DA /* SignUpView.swift in Sources */,
 				A34373FB27BCCAFF004FD1DA /* AchivementsResult.swift in Sources */,
+				A3B0FA8627C4E6CD0084CAAC /* Mesh+Demo.swift in Sources */,
 				A34373B927B666A1004FD1DA /* Color.swift in Sources */,
 				A34373BC27B666A1004FD1DA /* ProgressBar.swift in Sources */,
+				A3B0FA7127C3467F0084CAAC /* Node.swift in Sources */,
+				A3B0FA8427C4E61A0084CAAC /* Mesh+MathHelp.swift in Sources */,
+				A3B0FA7C27C4E4DC0084CAAC /* NodeMapView.swift in Sources */,
 				A34373B727B666A1004FD1DA /* Inject.swift in Sources */,
 				A34373F027B9A120004FD1DA /* ApiJsonDecoder.swift in Sources */,
 				A34373D527B666A1004FD1DA /* SignInView.swift in Sources */,
 				A34373BD27B666A1004FD1DA /* CustomTextField.swift in Sources */,
+				A3B0FA8027C4E5630084CAAC /* EdgeView.swift in Sources */,
 				A34373D827B666A1004FD1DA /* AccountsService.swift in Sources */,
 				A34373C727B666A1004FD1DA /* HomeView.swift in Sources */,
 			);

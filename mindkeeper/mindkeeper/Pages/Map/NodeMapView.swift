@@ -28,31 +28,30 @@
 
 import SwiftUI
 
-struct MapView: View {
+struct NodeMapView: View {
   @ObservedObject var selection: SelectionHandler
-  @ObservedObject var mesh: Mesh
-//    @ObservedObject var viewModel: MapViewModel
+  @Binding var nodes: [Node]
   
   var body: some View {
     ZStack {
-//      Rectangle().fill(Color.orange)
-      EdgeMapView(edges: $mesh.links)
-      NodeMapView(selection: selection, nodes: $mesh.nodes)
+      ForEach(nodes, id: \.visualID) { node in
+        NodeView(node: node, selection: self.selection)
+          .offset(x: node.position.x, y: node.position.y)
+          .onTapGesture {
+            self.selection.selectNode(node)
+          }
+      }
     }
   }
 }
 
-struct MapView_Previews: PreviewProvider {
+struct NodeMapView_Previews: PreviewProvider {
+  static let node1 = Node(position: CGPoint(x: -100, y: -30), text: "hello")
+  static let node2 = Node(position: CGPoint(x: 100, y: 30), text: "world")
+  @State static var nodes = [node1, node2]
+
   static var previews: some View {
-    let mesh = Mesh()
-    let child1 = Node(position: CGPoint(x: 100, y: 200), text: "child 1")
-    let child2 = Node(position: CGPoint(x: -100, y: 200), text: "child 2")
-    [child1, child2].forEach {
-      mesh.addNode($0)
-      mesh.connect(mesh.rootNode(), to: $0)
-    }
-    mesh.connect(child1, to: child2)
     let selection = SelectionHandler()
-    return MapView(selection: selection, mesh: mesh)
+    return NodeMapView(selection: selection, nodes: $nodes)
   }
 }
