@@ -6,6 +6,8 @@ class SignUpViewModel: ObservableObject {
     @Inject
     var authRepository: AccountsService
     
+    @Inject var alertManager: AlertManager
+    
     @Published var login = ""
     @Published var password = ""
     @Published var passwordRepeat = ""
@@ -83,7 +85,7 @@ class SignUpViewModel: ObservableObject {
         authRepository.register(login, password)
             .sink(receiveCompletion: { [unowned self] completion in
                 if case let .failure(error) = completion {
-                    print(error)
+                    alertManager.enqueue(error)
                 }
                 isLoading = false
             }, receiveValue: { [unowned self] data in

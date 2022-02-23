@@ -21,6 +21,7 @@ struct HomeView: View {
                                     Text(String(viewModel.ideasCreatedCount))
                                 }
                                 .padding()
+                                .padding(.top)
                             }
                             NavigationLink(destination: AchievementsView(), label: { Text("Achievements") })
                                 .buttonStyle(MainButtonStyle())

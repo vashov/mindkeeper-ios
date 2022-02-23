@@ -10,16 +10,19 @@ struct ContentView: View {
     //    @EnvironmentObject var appState: AppState
     
     var body: some View {
-        if appState.isLoggedIn {
-            MenuView()
-                .alert(isPresented: $alertManager.isPresented) {
-                    Alert(title: Text(alertManager.dequeue().localizedDescription), dismissButton: .default(Text("Got it!")))
-                }
-        } else {
-            SignInView()
-                .alert(isPresented: $alertManager.isPresented) {
-                    Alert(title: Text(alertManager.dequeue().localizedDescription), dismissButton: .default(Text("Got it!")))
-                }
+        GetView()
+            .alert(isPresented: $alertManager.isPresented) {
+                Alert(title: Text(alertManager.dequeue().localizedDescription), dismissButton: .default(Text("Got it!")))
+            }
+    }
+    
+    private func GetView() -> some View {
+        VStack {
+            if appState.isLoggedIn {
+                MenuView()
+            } else {
+                SignInView()
+            }
         }
     }
     

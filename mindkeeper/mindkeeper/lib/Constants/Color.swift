@@ -2,10 +2,11 @@ import SwiftUI
 
 extension Color {
     static let constMain = Color(hex: "23b5ff")
+    static let constDarkMain = Color(hex: "236cff")
     
     static let backgroundPrimary = Color.white
     static let backgroundSecond = Color.constMain
-    static let foregroundPrimary = Color.constMain
+    static let foregroundPrimary = Color.constDarkMain
     static let foregroundSecond = Color.white
     static let foregroundThird = Color.black
 }

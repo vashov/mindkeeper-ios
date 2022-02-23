@@ -34,6 +34,8 @@ struct SignUpView: View {
                         }) }
                 ) {
                     Text("SIGN UP")
+                        .bold()
+                        .foregroundColor(.foregroundPrimary)
                 }
                 .buttonStyle(MainButtonStyle())
                 .padding(.top, 22)
@@ -57,6 +59,7 @@ struct SignUpView: View {
             .background(Color.backgroundPrimary)
 //            .ignoresSafeArea(.all, edges: .all)
         }
+        .navigationBarHidden(true)
     }
 }
 
