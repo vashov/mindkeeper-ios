@@ -23,14 +23,11 @@
 		A34373C227B666A1004FD1DA /* ApiCodeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A343738727B666A1004FD1DA /* ApiCodeError.swift */; };
 		A34373C327B666A1004FD1DA /* Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = A343738927B666A1004FD1DA /* Resolver.swift */; };
 		A34373C427B666A1004FD1DA /* HttpRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A343738A27B666A1004FD1DA /* HttpRequestBuilder.swift */; };
-		A34373C527B666A1004FD1DA /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A343738D27B666A1004FD1DA /* SettingsView.swift */; };
 		A34373C627B666A1004FD1DA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A343738F27B666A1004FD1DA /* HomeViewModel.swift */; };
 		A34373C727B666A1004FD1DA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A343739027B666A1004FD1DA /* HomeView.swift */; };
 		A34373C827B666A1004FD1DA /* StatisticsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A343739127B666A1004FD1DA /* StatisticsModel.swift */; };
 		A34373C927B666A1004FD1DA /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A343739327B666A1004FD1DA /* SignUpViewModel.swift */; };
 		A34373CA27B666A1004FD1DA /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A343739427B666A1004FD1DA /* SignUpView.swift */; };
-		A34373CB27B666A1004FD1DA /* LeaderboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A343739627B666A1004FD1DA /* LeaderboardViewModel.swift */; };
-		A34373CC27B666A1004FD1DA /* LeaderboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A343739727B666A1004FD1DA /* LeaderboardView.swift */; };
 		A34373CD27B666A1004FD1DA /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A343739927B666A1004FD1DA /* MapView.swift */; };
 		A34373CE27B666A1004FD1DA /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A343739A27B666A1004FD1DA /* MapViewModel.swift */; };
 		A34373D027B666A1004FD1DA /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A343739D27B666A1004FD1DA /* MenuViewModel.swift */; };
@@ -102,14 +99,11 @@
 		A343738727B666A1004FD1DA /* ApiCodeError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiCodeError.swift; sourceTree = "<group>"; };
 		A343738927B666A1004FD1DA /* Resolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resolver.swift; sourceTree = "<group>"; };
 		A343738A27B666A1004FD1DA /* HttpRequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRequestBuilder.swift; sourceTree = "<group>"; };
-		A343738D27B666A1004FD1DA /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		A343738F27B666A1004FD1DA /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		A343739027B666A1004FD1DA /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A343739127B666A1004FD1DA /* StatisticsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsModel.swift; sourceTree = "<group>"; };
 		A343739327B666A1004FD1DA /* SignUpViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		A343739427B666A1004FD1DA /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
-		A343739627B666A1004FD1DA /* LeaderboardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardViewModel.swift; sourceTree = "<group>"; };
-		A343739727B666A1004FD1DA /* LeaderboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardView.swift; sourceTree = "<group>"; };
 		A343739927B666A1004FD1DA /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		A343739A27B666A1004FD1DA /* MapViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		A343739D27B666A1004FD1DA /* MenuViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
@@ -287,23 +281,13 @@
 				A3B0FA6227C2AD300084CAAC /* IdeaDetails */,
 				A343741127BEE903004FD1DA /* Statistics */,
 				A343740227BEE0B0004FD1DA /* Achievements */,
-				A343738C27B666A1004FD1DA /* Settings */,
 				A343738E27B666A1004FD1DA /* Home */,
 				A34373A227B666A1004FD1DA /* SignIn */,
 				A343739227B666A1004FD1DA /* SignUp */,
-				A343739527B666A1004FD1DA /* Leaderboard */,
 				A343739827B666A1004FD1DA /* Map */,
 				A343739C27B666A1004FD1DA /* Menu */,
 			);
 			path = Pages;
-			sourceTree = "<group>";
-		};
-		A343738C27B666A1004FD1DA /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				A343738D27B666A1004FD1DA /* SettingsView.swift */,
-			);
-			path = Settings;
 			sourceTree = "<group>";
 		};
 		A343738E27B666A1004FD1DA /* Home */ = {
@@ -323,15 +307,6 @@
 				A343739427B666A1004FD1DA /* SignUpView.swift */,
 			);
 			path = SignUp;
-			sourceTree = "<group>";
-		};
-		A343739527B666A1004FD1DA /* Leaderboard */ = {
-			isa = PBXGroup;
-			children = (
-				A343739627B666A1004FD1DA /* LeaderboardViewModel.swift */,
-				A343739727B666A1004FD1DA /* LeaderboardView.swift */,
-			);
-			path = Leaderboard;
 			sourceTree = "<group>";
 		};
 		A343739827B666A1004FD1DA /* Map */ = {
@@ -611,9 +586,7 @@
 				A343740D27BEE3FF004FD1DA /* MainButtonStyle.swift in Sources */,
 				A3B0FA6D27C344E50084CAAC /* NodeView.swift in Sources */,
 				A3B0FA7327C346D20084CAAC /* Mesh.swift in Sources */,
-				A34373C527B666A1004FD1DA /* SettingsView.swift in Sources */,
 				A34373FD27BCCDC3004FD1DA /* StatsUserResult.swift in Sources */,
-				A34373CB27B666A1004FD1DA /* LeaderboardViewModel.swift in Sources */,
 				A3B0FA7E27C4E5420084CAAC /* EdgeMapView.swift in Sources */,
 				A343740427BEE0DC004FD1DA /* AchievementsViewModel.swift in Sources */,
 				A34373C827B666A1004FD1DA /* StatisticsModel.swift in Sources */,
@@ -648,7 +621,6 @@
 				A34373F427BC2894004FD1DA /* AlertManager.swift in Sources */,
 				A34373E627B7ACA5004FD1DA /* PasswordCheck.swift in Sources */,
 				A34373E827B7ACB7004FD1DA /* UsernameCheck.swift in Sources */,
-				A34373CC27B666A1004FD1DA /* LeaderboardView.swift in Sources */,
 				A3B0FA8827C4EE850084CAAC /* MapSurfaceTabView.swift in Sources */,
 				A3B0FA6B27C2CEBE0084CAAC /* IdeaListResult.swift in Sources */,
 				A34373DC27B666A1004FD1DA /* User.swift in Sources */,
